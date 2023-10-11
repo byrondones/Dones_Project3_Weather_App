@@ -14,11 +14,12 @@
     border-color: var(--primarycolor);
     color: var(--fourthcolor);
 
-    width: 400px;
+    width: 380px;
     height: 75px;
 
     background: rgba(124, 124, 124, 0.281);
     background: linear-gradient(331deg, #979797c9, rgba(107, 107, 107, 0.37)6b, #F8F8F8);
+    
 }
 
 .logo{
@@ -76,7 +77,7 @@
 .form-control{
     border-color: var(--primarycolor);
     border-width: 2px;
-    width: 250px !important;
+    width: 230px !important;
 }
 .temp{
     font-size: 64px;
