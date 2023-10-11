@@ -126,7 +126,9 @@ function searchCity(){
 
 function btnClose(){
     card.classList.add("cardClose");
-    logo.classList.remove("logoAfter")
+
+    logo.classList.remove("logoAfter");
+
     cardContent.innerHTML = "";
     weatherIcon.innerHTML = "";
 };

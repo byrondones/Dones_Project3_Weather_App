@@ -29,7 +29,6 @@
     text-shadow: 2px 2px 20px #000000;
     text-align: center;
     margin-top: 300px;
-
 }
 
 .logoAfter{
@@ -51,6 +50,7 @@
     height: 505px;
 
     transition: height .3s, top .5s;
+    
 }
 
 .cardClose{
