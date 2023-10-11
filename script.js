@@ -32,29 +32,28 @@ function searchCity(){
 
         //Modifying the card content Dom element to show the values from the API
         cardContent.innerHTML = `
-            <p class="text-center fw-medium" style="margin-bottom: -5px;">${forCast.weather[0].description}</p>
+            <p id="weatherDesc" class="text-center fw-medium" style="margin-bottom: -5px;">${forCast.weather[0].description}</p>
             <p class="text-center fw-bold temp">${tempValue}°c</p>
             <p class="text-center fw-medium location">${forCast.name}</p>
-
-            <div id="slot1">
-                <span>Min Temp:</span>
-                <span class="fw-bold">${tempMinValue}°c</span>
-                <br>
-                <span>Humidity:</span>
-                <span class="fw-bold" id="slot1">${forCast.main.humidity}%</span>
-            </div>
 
             <div class="text-center" id="feelsLike">
                 <span class="fs-5">Feels Like:</span>
                 <span class="fw-bold fs-5">${tempFeelsValue}°c</span>
             </div>
-            
-            <div class="float-end" id="slot2">
-                <span>Max Temp:</span>
+
+            <div id="slot1">
+                <p>Min Temp:</p>
+                <span class="fw-bold">${tempMinValue}°c</span>
+                <p>Max Temp:</p>
                 <span id="slot4" class="fw-bold">${tempMaxValue}°c</span>
+            </div>
+            
+            <div class="" id="slot2">
+                <span>Humidity:</span>
+                <span class="fw-bold">${forCast.main.humidity}%</span>
                 <br>
                 <span>Wind Speed:</span>
-                <span class="fw-bold" id="slot2">${forCast.wind.speed} km/h</span>
+                <span class="fw-bold">${forCast.wind.speed} km/h</span>
             </div>
         `;
 

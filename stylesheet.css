@@ -14,12 +14,11 @@
     border-color: var(--primarycolor);
     color: var(--fourthcolor);
 
-    width: 380px;
+    width: 100%;
     height: 75px;
 
     background: rgba(124, 124, 124, 0.281);
     background: linear-gradient(331deg, #979797c9, rgba(107, 107, 107, 0.37)6b, #F8F8F8);
-    
 }
 
 .logo{
@@ -44,15 +43,14 @@
 }
 
 .cardAfter{
-    width: 400px;
-    height: 505px;
+    width: 100%;
+    height: 535px;
 
     transition: height .3s, top .5s;
-
 }
 
 .cardClose{
-    width: 400px;
+    width: 100%;
     height: 75px;
 
     transition: height .3s, top .5s;
@@ -66,7 +64,6 @@
     background-color: var(--fourthcolor);
 
     color: var(--secondarycolor);
-    margin-left: 15px;
 }
 
 .btn:hover{
@@ -77,26 +74,41 @@
 .form-control{
     border-color: var(--primarycolor);
     border-width: 2px;
-    width: 230px !important;
+    width: 65% !important;
 }
+
 .temp{
     font-size: 64px;
 }
 
 #slot1{
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+
+    margin-bottom: 10px;
+}
+
+#slot2{
+    text-align: center;
+    margin-top: -15px;
 }
 
 #feelsLike{
-    margin-top: -100px;
+    /* margin-top: -100px; */
     margin-bottom: 20px;
 }
 
 .location{
     font-size: 34px;
     margin-top: -30px;
-    margin-bottom: -35px;
+    margin-bottom: 5px;
+}
 
+#weatherDesc{
+    text-transform: capitalize;
 }
 
 .icon{
@@ -116,4 +128,35 @@
     z-index: -1;
 
     filter: blur(10px);
+}
+
+@media screen and (min-width: 768px) {
+    .card{
+        width: 80%;
+        height: 75;
+    
+        transition: height .3s, top .5s;
+    }
+
+    .logo{
+        margin-top: 150px;
+    }
+
+    #slot2{
+        text-align: center;
+    }
+    
+    .form-control{
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .card{
+        width: 40% !important;
+    }
+
+    .logo{
+        margin-top: 50px;
+    }
 }
