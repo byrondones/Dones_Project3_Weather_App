@@ -22,13 +22,12 @@
 }
 
 .logo{
-    font-size: 100px;
+    font-size: 64px;
     font-weight: bold;
     color: var(--fourthcolor);
 
     text-shadow: 2px 2px 20px #000000;
     text-align: center;
-    margin-top: 300px;
 }
 
 .logoAfter{
@@ -39,8 +38,6 @@
 
     text-shadow: 2px 2px 20px #000000;
     text-align: center;
-
-    margin-top: -200px;
 
     transition: height .3s, margin-top .5s;
 }
@@ -79,7 +76,7 @@
 .form-control{
     border-color: var(--primarycolor);
     border-width: 2px;
-    width: 220px !important;
+    width: 215px !important;
 }
 .temp{
     font-size: 64px;
