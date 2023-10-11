@@ -1,0 +1,100 @@
+:root{
+    --primarycolor: #929AAB;
+    --secondarycolor: #393E46;
+    --tertiarycolor: #EEEEEE;
+    --fourthcolor: #F7F7F7;
+}
+
+.body{
+    font-family: 'Poppins' !important;
+}
+
+.card{
+    border-width: 2px;
+    border-color: var(--tertiarycolor);
+    color: var(--fourthcolor);
+
+    width: 400px;
+    height: 75px;
+    
+    top: 350px;
+
+    background: rgb(124, 124, 124);
+    background: linear-gradient(331deg, #979797c9, rgba(107, 107, 107, 0.37)6b, #F8F8F8);
+}
+
+.cardAfter{
+    top: 200px;
+
+    width: 400px;
+    height: 505px;
+
+    transition: height .3s, top .5s;
+}
+
+.cardClose{
+    width: 400px;
+    height: 75px;
+    
+    top: 350px;
+
+    transition: height .3s, top .5s;
+}
+
+.btn{
+    border-color: var(--primarycolor);
+    border-width: 2px;
+    border-radius: 200px;
+
+    background-color: var(--fourthcolor);
+
+    color: var(--secondarycolor);
+    margin-left: 15px;
+}
+
+.btn:hover{
+    background-color: var(--secondarycolor);
+    color: var(--fourthcolor);
+}
+
+.form-control{
+    border-color: var(--tertiarycolor);
+    border-width: 2px;
+    width: 220px !important;
+}
+.temp{
+    font-size: 64px;
+}
+
+#slot1{
+    margin-top: 100px;
+}
+
+#feelsLike{
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+
+.location{
+    font-size: 34px;
+    margin-top: -30px;
+    margin-bottom: -35px;
+
+}
+
+.icon{
+    height: 150px !important;
+    margin-top: 20px !important;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
