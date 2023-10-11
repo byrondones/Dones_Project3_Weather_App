@@ -64,7 +64,7 @@ function searchCity(){
             <img src="images/2.png" class="d-block mx-auto my-auto icon">
             `;
             weatherBg.innerHTML = `
-            <video id="background-video" autoplay loop muted>
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Cloudy.mp4" type="video/mp4">
             </video>
             `;
@@ -74,7 +74,7 @@ function searchCity(){
             <img src="images/1.png" class="d-block mx-auto my-auto icon">
             `;
             weatherBg.innerHTML = `
-            <video id="background-video" autoplay loop muted>
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Clear.mp4" type="video/mp4">
             </video>
             `;
@@ -84,7 +84,7 @@ function searchCity(){
             <img src="images/4.png" class="d-block mx-auto my-auto icon">
             `;
             weatherBg.innerHTML = `
-            <video id="background-video" autoplay loop muted>
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Rain.mp4" type="video/mp4">
             </video>
             `;
@@ -94,7 +94,7 @@ function searchCity(){
             <img src="images/7.png" class="d-block mx-auto my-auto icon">
             `;
             weatherBg.innerHTML = `
-            <video id="background-video" autoplay loop muted>
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Snow.mp4" type="video/mp4">
             </video>
             `;
@@ -104,7 +104,7 @@ function searchCity(){
             <img src="images/3.png" class="d-block mx-auto my-auto icon">
             `;
             weatherBg.innerHTML = `
-            <video id="background-video" autoplay loop muted>
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Thunderstorm.mp4" type="video/mp4">
             </video>
             `;
@@ -114,7 +114,7 @@ function searchCity(){
             <img src="images/8.png" class="d-block mx-auto my-auto icon">
             `;
             weatherBg.innerHTML = `
-            <video id="background-video" autoplay loop muted>
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Windy.mp4" type="video/mp4">
             </video>
             `;
