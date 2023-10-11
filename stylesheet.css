@@ -16,16 +16,37 @@
 
     width: 400px;
     height: 75px;
-    
-    top: 350px;
 
     background: rgb(124, 124, 124);
     background: linear-gradient(331deg, #979797c9, rgba(107, 107, 107, 0.37)6b, #F8F8F8);
 }
 
-.cardAfter{
-    top: 200px;
+.logo{
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--fourthcolor);
 
+    text-shadow: 2px 2px 20px #000000;
+    text-align: center;
+    margin-top: 300px;
+
+}
+
+.logoAfter{
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--fourthcolor);
+    /* -webkit-text-stroke: 2px var(--fourthcolor); */
+
+    text-shadow: 2px 2px 20px #000000;
+    text-align: center;
+
+    margin-top: -200px;
+
+    transition: height .3s, margin-top .5s;
+}
+
+.cardAfter{
     width: 400px;
     height: 505px;
 
@@ -35,8 +56,6 @@
 .cardClose{
     width: 400px;
     height: 75px;
-    
-    top: 350px;
 
     transition: height .3s, top .5s;
 }
@@ -97,4 +116,6 @@
     top: 0;
     bottom: 0;
     z-index: -1;
+
+    filter: blur(10px);
 }

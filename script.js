@@ -7,7 +7,9 @@ let searchCityInput = document.querySelector(`#inputSearch`);
 let cardContent = document.querySelector(`#cardContent`);
 let weatherIcon = document.querySelector(`#weatherIcon`);
 let card = document.querySelector(`.card`);
-let weatherBg = document.querySelector(`#id`)
+let weatherBg = document.querySelector(`#videoBg`)
+let logo = document.querySelector(`#logoArea`);
+
 function searchCity(){
     if(searchCityInput.value != ""){
         fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchCityInput.value}&appid=7257a2d6c0f8cae4bcaff822109e1933`)
@@ -51,29 +53,67 @@ function searchCity(){
             weatherIcon.innerHTML = `
             <img src="images/2.png" class="d-block mx-auto my-auto icon">
             `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/Cloudy.mp4" type="video/mp4">
+            </video>
+            `;
+
         }else if(forCast.weather[0].main === 'Clear'){
             weatherIcon.innerHTML = `
             <img src="images/1.png" class="d-block mx-auto my-auto icon">
             `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/Clear.mp4" type="video/mp4">
+            </video>
+            `;
+
         }else if(forCast.weather[0].main === 'Rain'){
             weatherIcon.innerHTML = `
             <img src="images/4.png" class="d-block mx-auto my-auto icon">
             `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/Rain.mp4" type="video/mp4">
+            </video>
+            `;
+
         }else if(forCast.weather[0].main === 'Snow'){
             weatherIcon.innerHTML = `
             <img src="images/7.png" class="d-block mx-auto my-auto icon">
             `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/Snow.mp4" type="video/mp4">
+            </video>
+            `;
+
         }else if(forCast.weather[0].main === 'Thunderstorm'){
             weatherIcon.innerHTML = `
             <img src="images/3.png" class="d-block mx-auto my-auto icon">
             `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/Thunderstorm.mp4" type="video/mp4">
+            </video>
+            `;
+
         }else if(forCast.weather[0].main === 'Windy'){
             weatherIcon.innerHTML = `
             <img src="images/8.png" class="d-block mx-auto my-auto icon">
             `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/Windy.mp4" type="video/mp4">
+            </video>
+            `;
+
         }else{
             alert("Error!");
         };
+
+        logo.classList.add("logoAfter");
 
         card.classList.add("cardAfter");
         card.classList.remove("cardClose");
@@ -86,6 +126,7 @@ function searchCity(){
 
 function btnClose(){
     card.classList.add("cardClose");
+    logo.classList.remove("logoAfter")
     cardContent.innerHTML = "";
     weatherIcon.innerHTML = "";
 };
