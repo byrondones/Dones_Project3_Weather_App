@@ -76,7 +76,7 @@
 .form-control{
     border-color: var(--primarycolor);
     border-width: 2px;
-    width: 215px !important;
+    width: 210px !important;
 }
 .temp{
     font-size: 64px;
