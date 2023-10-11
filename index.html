@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="/images/2.png">
 </head>
 <body>
     <div id="videoBg">
@@ -25,8 +26,10 @@
                     <div class="card-body">
                         <div id="searchInputs">
                             <div class="btn float-end" onclick="return btnClose()"><i class="fa-solid fa-xmark fs-6"></i></div>
+
                             <div class="btn float-end" onclick="return searchCity()"><i class="fa-solid fa-search fs-6"></i></div>
-                        <input type="text" class="form-control rounded rounded-5" id="inputSearch">
+
+                        <input type="text" class="form-control rounded rounded-5" id="inputSearch" placeholder="Search City...">
                         </div>
 
                         <div id="weatherIcon">

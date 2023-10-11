@@ -11,13 +11,13 @@
 
 .card{
     border-width: 2px;
-    border-color: var(--tertiarycolor);
+    border-color: var(--primarycolor);
     color: var(--fourthcolor);
 
     width: 400px;
     height: 75px;
 
-    background: rgb(124, 124, 124);
+    background: rgba(124, 124, 124, 0.281);
     background: linear-gradient(331deg, #979797c9, rgba(107, 107, 107, 0.37)6b, #F8F8F8);
 }
 
@@ -50,7 +50,7 @@
     height: 505px;
 
     transition: height .3s, top .5s;
-    
+
 }
 
 .cardClose{
@@ -77,7 +77,7 @@
 }
 
 .form-control{
-    border-color: var(--tertiarycolor);
+    border-color: var(--primarycolor);
     border-width: 2px;
     width: 220px !important;
 }
