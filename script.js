@@ -57,6 +57,8 @@ function searchCity(){
             </div>
         `;
 
+    console.log(forCast.weather[0].main)
+
         //condition to change the Weather logo and background depending on the user searched city
         if(forCast.weather[0].main === 'Clouds'){
             weatherIcon.innerHTML = `
@@ -115,6 +117,16 @@ function searchCity(){
             weatherBg.innerHTML = `
             <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
                 <source src="videos/Windy.mp4" type="video/mp4">
+            </video>
+            `;
+
+        }else if(forCast.weather[0].main === 'Dust'){
+            weatherIcon.innerHTML = `
+            <img src="images/11.png" class="d-block mx-auto my-auto icon">
+            `;
+            weatherBg.innerHTML = `
+            <video id="background-video" autoplay loop muted webkit-playsinline playsinline>
+                <source src="videos/Dusty.mp4" type="video/mp4">
             </video>
             `;
 
