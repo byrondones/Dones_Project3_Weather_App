@@ -1,6 +1,8 @@
+//Declared API Keys
 const apiKey = "7257a2d6c0f8cae4bcaff822109e1933";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=germany";
 
+//Declared DOM elements to call only Var Name
 const addCard = document.querySelector(`#btnAddCard`);
 const searchCityBtn = document.querySelector(`#btnSearch`);
 let searchCityInput = document.querySelector(`#inputSearch`);
@@ -10,18 +12,25 @@ let card = document.querySelector(`.card`);
 let weatherBg = document.querySelector(`#videoBg`)
 let logo = document.querySelector(`#logoArea`);
 
+//Search Button Function
 function searchCity(){
+
+    //A condition to see if the input is Not Empty
     if(searchCityInput.value != ""){
+
+        //fetches the data from the API
         fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchCityInput.value}&appid=7257a2d6c0f8cae4bcaff822109e1933`)
 
         .then(response => response.json())
         .then(forCast => {
 
+        //Converts float values to whole number
         let tempValue = Math.floor(forCast.main.temp);
         let tempMinValue = Math.floor(forCast.main.temp_min);
         let tempMaxValue = Math.floor(forCast.main.temp_max);
         let tempFeelsValue = Math.floor(forCast.main.feels_like);
 
+        //Modifying the card content Dom element to show the values from the API
         cardContent.innerHTML = `
             <p class="text-center fw-medium" style="margin-bottom: -5px;">${forCast.weather[0].description}</p>
             <p class="text-center fw-bold temp">${tempValue}°c</p>
@@ -49,6 +58,7 @@ function searchCity(){
             </div>
         `;
 
+        //condition to change the Weather logo and background depending on the user searched city
         if(forCast.weather[0].main === 'Clouds'){
             weatherIcon.innerHTML = `
             <img src="images/2.png" class="d-block mx-auto my-auto icon">
@@ -113,10 +123,13 @@ function searchCity(){
             alert("Error!");
         };
 
+        //classlist for the function of cards
         logo.classList.add("logoAfter");
 
         card.classList.add("cardAfter");
         card.classList.remove("cardClose");
+
+        //reseting input field
         searchCityInput.value = "";
     });
     }else{
@@ -124,6 +137,7 @@ function searchCity(){
     }
 };
 
+//Button close function
 function btnClose(){
     card.classList.add("cardClose");
 
