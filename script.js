@@ -12,6 +12,7 @@ let card = document.querySelector(`.card`);
 let weatherBg = document.querySelector(`#videoBg`)
 let logo = document.querySelector(`#logoArea`);
 
+try{
 //Search Button Function
 function searchCity(){
 
@@ -147,6 +148,10 @@ function searchCity(){
         alert("Field cannot be Empty!");
     }
 };
+}catch{
+alert(err)
+};
+
 
 //Button close function
 function btnClose(){
