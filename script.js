@@ -11,17 +11,17 @@ let weatherIcon = document.querySelector(`#weatherIcon`);
 let card = document.querySelector(`.card`);
 let weatherBg = document.querySelector(`#videoBg`)
 let logo = document.querySelector(`#logoArea`);
+let releaseNotes = document.querySelector('#updateNotesBtn');
 
-try{
 //Search Button Function
 function searchCity(){
-
+try {
+    
     //A condition to see if the input is Not Empty
     if(searchCityInput.value != ""){
 
         //fetches the data from the API
         fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchCityInput.value}&appid=7257a2d6c0f8cae4bcaff822109e1933`)
-
         .then(response => response.json())
         .then(forCast => {
 
@@ -49,7 +49,7 @@ function searchCity(){
                 <span id="slot4" class="fw-bold">${tempMaxValue}°c</span>
             </div>
             
-            <div class="" id="slot2">
+            <div id="slot2">
                 <span>Humidity:</span>
                 <span class="fw-bold">${forCast.main.humidity}%</span>
                 <br>
@@ -81,7 +81,7 @@ function searchCity(){
             </video>
             `;
 
-        }else if(forCast.weather[0].main === 'Rain'){
+        }else if(forCast.weather[0].main === 'Rain' || forCast.weather[0].main === 'Drizzle'){
             weatherIcon.innerHTML = `
             <img src="images/4.png" class="d-block mx-auto my-auto icon">
             `;
@@ -146,10 +146,10 @@ function searchCity(){
     });
     }else{
         alert("Field cannot be Empty!");
-    }
-};
-}catch{
-alert(err)
+    };
+} catch (err) {
+    console.log(error);
+}
 };
 
 
@@ -162,3 +162,5 @@ function btnClose(){
     cardContent.innerHTML = "";
     weatherIcon.innerHTML = "";
 };
+
+//Modal
