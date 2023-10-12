@@ -126,8 +126,17 @@
     top: 0;
     bottom: 0;
     z-index: -1;
-
     filter: blur(10px);
+}
+
+.btn1{
+    border: none;
+    background: none;
+    color: var(--fourthcolor);
+}
+
+.footer{
+    color: var(--fourthcolor);
 }
 
 @media screen and (min-width: 768px) {
@@ -160,3 +169,4 @@
         margin-top: 50px;
     }
 }
+
